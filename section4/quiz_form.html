@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register From</title>
+</head>
+<body>
+	<h1>Register</h1>
+	<form>
+		<!-- First Name Input -->
+		
+		<label for="first_name">First Name: </label>
+		<input id="first_name" type="text" name="first_name" placeholder="John" required>
+		<!-- Last Name Input -->
+		<label for="last_name">Last Name: </label>
+		<input id="last_name" type="text" name="last_name" placeholder="Smith" required>
+		<br>
+		<!-- Gender Choise - radio -->
+		<!-- Male -->
+		<label for="male">Male</label>
+		<input id="male" type="radio" name="gender" value="MALE" required>
+		<!-- Female -->
+		<label for="female">Female</label>
+		<input id="female" type="radio" name="gender" value="FEMALE">
+		<!-- Other -->
+		<label for="other">Other</label>
+		<input id="other" type="radio" name="gender" value="OTHER">
+		<br>
+		<!-- Email and password -->
+		<label for="email">Email:</label>
+		<input id="email" type="email" name="email" placeholder="your email" required>
+
+		<label for="password">Password:</label>	
+		<input id="password" type="password" name="password" required minlength="8" placeholder="password">	
+		<br>
+		<!-- Birthday select boxes -->
+		<label >Birthday:</label>
+		<select name="birthday" required>
+			 <option value="" disabled selected>Month</option>
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+		</select>
+		<!-- <select name="birthday" placeholder="Month">
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+		</select> -->
+		<!-- Subimit button -->
+		<br>
+		<button>Send</button>
+	</form>
+</body>
+</html>
