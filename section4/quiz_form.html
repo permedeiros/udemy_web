@@ -7,46 +7,66 @@
 	<h1>Register</h1>
 	<form>
 		<!-- First Name Input -->
-		
-		<label for="first_name">First Name: </label>
-		<input id="first_name" type="text" name="first_name" placeholder="John" required>
-		<!-- Last Name Input -->
-		<label for="last_name">Last Name: </label>
-		<input id="last_name" type="text" name="last_name" placeholder="Smith" required>
-		<br>
+		<div>
+			<label for="first_name">First Name: </label>
+			<input id="first_name" type="text" name="first_name" placeholder="John" required>
+			<label for="last_name">Last Name: </label>
+			<input id="last_name" type="text" name="last_name" placeholder="Smith" required>
+		</div>
 		<!-- Gender Choise - radio -->
-		<!-- Male -->
-		<label for="male">Male</label>
-		<input id="male" type="radio" name="gender" value="MALE" required>
-		<!-- Female -->
-		<label for="female">Female</label>
-		<input id="female" type="radio" name="gender" value="FEMALE">
-		<!-- Other -->
-		<label for="other">Other</label>
-		<input id="other" type="radio" name="gender" value="OTHER">
-		<br>
-		<!-- Email and password -->
-		<label for="email">Email:</label>
-		<input id="email" type="email" name="email" placeholder="your email" required>
+		<div>
+			<!-- Male -->
+			<label for="male">Male</label>
+			<input id="male" type="radio" name="gender" value="MALE" required>
+			<!-- Female -->
+			<label for="female">Female</label>
+			<input id="female" type="radio" name="gender" value="FEMALE">
+			<!-- Other -->
+			<label for="other">Other</label>
+			<input id="other" type="radio" name="gender" value="OTHER">
+		</div>
 
-		<label for="password">Password:</label>	
-		<input id="password" type="password" name="password" required minlength="8" placeholder="password">	
-		<br>
+		<!-- Email and password -->
+		<div>
+			<label for="email">Email:</label>
+			<input id="email" type="email" name="email" placeholder="your email" required>
+
+			<label for="password">Password:</label>	
+			<input id="password" type="password" name="password" placeholder="password" pattern=".{5,10}" required title="Password must be between 5 and 10 characters">	
+		</div>
+		
 		<!-- Birthday select boxes -->
-		<label >Birthday:</label>
-		<select name="birthday" required>
-			 <option value="" disabled selected>Month</option>
-			<option value="1">January</option>
-			<option value="2">February</option>
-			<option value="3">March</option>
-			<option value="4">April</option>
-		</select>
-		<!-- <select name="birthday" placeholder="Month">
-			<option value="1">January</option>
-			<option value="2">February</option>
-			<option value="3">March</option>
-			<option value="4">April</option>
-		</select> -->
+		<div>
+			<label >Birthday:
+				<select name="month" required>
+					<option value="" disabled selected>Month</option>
+					<option value="1">January</option>
+					<option value="2">February</option>
+					<option value="3">March</option>
+					<option value="4">April</option>
+				</select>
+				<select name="day" required>
+					 <option value="" disabled selected>Day</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+				<select name="year" required>
+					<option value="" disabled selected>Year</option>
+					<option value="1">2015</option>
+					<option value="2">2016</option>
+					<option value="3">3015</option>
+					<option value="4">1900</option>
+				</select>
+			</label>
+		</div>
+		
+		<!-- Agree terms -->
+		<label for="terms">I agree to the terms and condtions</label>
+		<input type="checkbox" name="terms">
+
+
 		<!-- Subimit button -->
 		<br>
 		<button>Send</button>
