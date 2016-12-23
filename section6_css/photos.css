@@ -1,0 +1,16 @@
+
+img{
+	width: 30%;/*30% of the body*/
+	float:left;
+	margin:1.666%;/*Total de 6 margis por linha ocupando 10% do body*/
+}
+p{
+	font-family: "Raleway";
+	margin-left: 1.666%;
+	font-size: 23px;
+	font-weight: 800;
+	text-transform: uppercase;
+	width: 50%;
+	border-bottom: 2px solid #f1f1f1; 
+	padding-bottom: 20px;
+}

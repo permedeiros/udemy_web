@@ -1,0 +1,9 @@
+p{
+	/*Content - Width and Height*/
+	width: 50%; /*50% fo ther parent size*/
+	/*Borders*/
+	border: 2px solid blue;
+	padding: 10px;
+	/*Padding*/
+	/*Marging*/
+}
