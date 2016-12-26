@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Grid System</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<style type="text/css">
+		.pink{
+			background-color: pink;
+			border: 1px solid purple;
+		}
+		.orange{
+			background-color: orange;
+			border: 1px dashed red;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+
+</body>
+	<div class="container">
+		<!-- <div class="row">
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+		</div> -->
+		
+		<div class="row">
+			<!-- o bootstrap grid system tem 12 colunas -->
+			<!-- as classes especificam quantas colunas cada elemento de ve ocupar -->
+			<!-- col-lg-3 diz que em telas grandes cada elemento ocupara 3 colunas -->
+			<!-- col-md-3 diz que em telas médias cada elemento ocupará 3 colunas -->
+			<!-- col-sm-6 diz que em telas pequenas(tablets) cada elelemento ocupará 6 colunas ou seja 2 elementos por linha -->
+			<!-- como foi especificado o comportamento em telas medidas iguais ao em telas grandes, o col-lg-3 é reduntante -->
+			<!-- <div class="col-lg-3 col-md-3 col-sm-6 pink">Tour date</div> -->
+			<div class="col-md-3 col-sm-6 pink">
+				<div class="row">
+					<div class="col-lg-6 orange"> First Half</div>
+					<div class="col-lg-6 orange"> Second Half</div>
+				</div>
+
+			</div>
+			<div class="col-md-3 col-sm-6 pink">Tour date</div>
+			<div class="col-md-3 col-sm-6 pink">Tour date</div>
+			<div class="col-md-3 col-sm-6 pink">
+				<div class="row">
+					<div class="col-lg-2 orange"></div>
+					<div class="col-lg-2 orange"></div>
+					<div class="col-lg-2 orange"></div>
+					<div class="col-lg-2 orange"></div>
+					<div class="col-lg-2 orange"></div>
+					<div class="col-lg-2 orange"></div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+</html>
