@@ -1,4 +1,24 @@
 console.log("CONNECTED");
+var btn = document.querySelector("#btn");
+
+
+var isPurple = false;
+btn.addEventListener("click", function(){
+	// if(!isPurple){
+	// 	document.body.style.backgroundColor = "purple";
+	// 	isPurple = true;	
+	// }
+	// else{
+	// 	document.body.style.backgroundColor = "white";
+	// 	isPurple = false;
+	// }
+	//
+	//Toggle purple class
+	document.body.classList.toggle("purple");
+	
+
+});
+
 function printReverse(array){
 	for(var i = array.length - 1; i >= 0; i--){
 	 	console.log(array[i]);
@@ -32,3 +52,4 @@ function max(array) {
 
 	return max;
 }
+
