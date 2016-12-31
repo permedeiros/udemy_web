@@ -18,7 +18,7 @@ init();
  * Função de inicialização
  */
 function init(){
-	resetGame(numSquares);
+	resetGame(numSquares,false);
 	setupSquares();
 	setupModeButtons();
 	
@@ -26,6 +26,59 @@ function init(){
 		resetGame(numSquares);
 	});
 }
+
+
+/**
+ * Reinicia a GUI carregando novas cores de acordo com o números de corres passado como parâmetro
+ * @param  {[number]} numColors [Número de cores que serão carregadas]
+ * @param  {[boolean]} fade [Efetuar ou não fade ao remover/inserir os quadrados]
+ */
+function resetGame(numColors, fade){
+	generateRandonColors(numColors, fade);
+	pickedColor = pickColor();
+	colorDisplay.textContent = pickedColor;
+	h1.style.backgroundColor = "steelblue";
+	message.textContent = "";
+	resetButton.textContent = "New Colors";
+}
+
+
+/**
+ * Gera cores aleatórias para o vetor de cores que são usadas para preencher os quadrados
+ */
+function generateRandonColors(numColors, fade) {
+	colors = [];
+	for (var i = modeButtons.length*3 - 1; i >= 0; i--) {
+		if(i < numColors){
+			colors[i] = getRandonColor();
+			squares[i].style.backgroundColor = colors[i];
+			// force the element to show
+			if(fade){
+				$(".square:eq(" + i + ")").fadeIn(500);	
+			}
+			else squares[i].style.display = "block";
+			
+		}
+		else{
+			// hide the elemente
+			if(fade){
+				$(".square:eq(" + i  + ")").fadeOut(500);
+			}
+			else squares[i].style.display = "none";	
+			
+		}
+	}
+}
+
+/**
+ * Escolhe aleatoriamente uma cor dentro do vetor de cores
+ */
+function pickColor(){
+	var randon = getRandomInt(0, colors.length - 1);
+	var color = colors[randon];
+	return color;
+}
+
 
 /**
  * Inicializa cada um dos quadrados de cor
@@ -75,34 +128,11 @@ function modeButtonEvent(){
 			numSquares = (i+1)*3;
 		}
 	}
-	resetGame(numSquares);
-}
-
-/**
- * Reinicia a GUI carregando novas cores de acordo com o números de corres passado como parâmetro
- * @param  {[type]} numColors [Número de cores que serão carregadas]
- */
-function resetGame(numColors){
-	generateRandonColors(numColors);
-	pickedColor = pickColor();
-	colorDisplay.textContent = pickedColor;
-	h1.style.backgroundColor = "steelblue";
-	message.textContent = "";
-	resetButton.textContent = "New Colors";
+	resetGame(numSquares, true);
 }
 
 
 
-
-
-
-/**
- * Returns a random integer between min (inclusive) and max (inclusive)
- * Using Math.round() will give you a non-uniform distribution!
- */
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
 /**
  * Get a randon rgb string color - rgb('Rvalue', 'Gvalue', 'Bvalue');
@@ -125,31 +155,15 @@ function changeSquaresColors(color) {
 
 
 /**
- * Gera cores aleatórias para o vetor de cores que são usadas para preencher os quadrados
+ * Returns a random integer between min (inclusive) and max (inclusive)
+ * Using Math.round() will give you a non-uniform distribution!
  */
-function generateRandonColors(numColors) {
-	colors = [];
-	for (var i = modeButtons.length*3 - 1; i >= 0; i--) {
-		if(i < numColors){
-			colors[i] = getRandonColor();
-			squares[i].style.backgroundColor = colors[i];
-			// force the element to show
-			squares[i].style.display = "block";
-		}
-		else{
-			// hide the elemente
-			squares[i].style.display = "none";	
-		}
-		
-	}
-	
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-/**
- * Escolhe aleatoriamente uma cor dentro do vetor de cores
- */
-function pickColor(){
-	var randon = getRandomInt(0, colors.length - 1);
-	var color = colors[randon];
-	return color;
-}
+
+
+
+
+
 

@@ -3,10 +3,12 @@ body{
 	background-color: #232323;
 	margin: 0;
 	font-family: "Montserrat", "Avenir";
+	height: 100%;
 }
 
 .square{
 	width: 30%;
+	height: 30%;
 	background-color: #232323;
 	padding-bottom: 30%;
 	float: left;
@@ -21,6 +23,7 @@ body{
 #container{
 	margin: 20px auto;
 	max-width: 600px;
+	height: 100%;
 
 }
 
@@ -67,8 +70,8 @@ button{
 	color: steelblue;
 	letter-spacing: 1px;
 	font-size: inherit;
-	transition: all 0.5s; /*numPropertis tempoFade */
-	--webkit-transition: all 0.5s;;
+	transition: all 0.5s;
+ 	--webkit-transition: all 0.5s;;
 	--moz-transition: all 0.5s;
 	outline: none;
 }
