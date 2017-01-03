@@ -9,7 +9,6 @@ $("ul").on("click", "span", function(event){
 	$(this).parent().fadeOut(500,function(){
 		$(this).remove();
 	});
-		//Stop event propation on the parents elements
 	event.stopPropagation();
 });
 
@@ -18,6 +17,11 @@ $("input[type='text']").keypress(function(event){
 	if(event.which === 13){
 		//grabbing new tod text from input 
 		var todoText = $(this).val();
-		$("ul").append("<li><span>X</span> " + todoText + "</li>");
+		$("ul").append("<li><span><i class='fa fa-trash' aria-hidden='true'></i></span> " + todoText + "</li>");
+		$(this).val("");
 	}	
+});
+
+$(".fa-pencil").click(function(){
+	$("input[type='text']").fadeToggle();
 });
